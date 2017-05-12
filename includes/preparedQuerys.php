@@ -9,10 +9,10 @@
  */
 
 //Consultas Login
-define ( "LOGIN_SEL_EMPLEADO", "SELECT Rut FROM User WHERE Rut = ? and Status = 1" );
-define ( "LOGIN_SEL_EMPLEADOPWD", "SELECT Rut FROM User WHERE Rut= ? AND Password= ? and Status = 1" );
+define ( "LOGIN_SEL_USER", "SELECT Rut FROM User WHERE Rut = ? and Status = 1" );
+define ( "LOGIN_SEL_USERPWD", "SELECT Rut FROM User WHERE Rut= ? AND Password= ? and Status = 1" );
 define ( "LOGIN_SEL_LEVELACC", "SELECT Rol_id FROM User WHERE Rut = ?" );
-define ( "LOGIN_SEL_SUCURSAL", "SELECT School_id FROM User WHERE Rut = ?" );
+define ( "LOGIN_SEL_SCHOOL", "SELECT School_id FROM User WHERE Rut = ?" );
 define ( "LOGIN_SEL_NAME", "SELECT Name FROM User WHERE Rut = ? AND Status = 1" );
 //==============================================================Revisado hasta aqui====================================================================
 //Consulta Creacion de Usuarios
