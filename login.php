@@ -6,6 +6,7 @@ $Login = new Login ();
 if (isset ( $_POST ["Login"] )) {
   $error = $Login->validateUser ( $_POST ["inputRut"], $_POST ["inputPassword"] );
 }
+var_dump($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="en">

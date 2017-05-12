@@ -39,7 +39,7 @@ class Login {
 	}
 	function getUserAcc($user, $pass) {
 		$str = sha1 ( $user . ":" . $pass );
-		if ($stmt = $this->MySQL->PrepareQuery ( LOGIN_SEL_USERPWD )) {
+		if ($stmt = $this->MySQL->PrepareQuery ( LOGIN_SEL_EMPLEADOPWD )) {
 			$stmt->bind_param ( "is", $user, $str );
 			$stmt->execute ();
 			$stmt->bind_result ( $nombre );
@@ -62,7 +62,7 @@ class Login {
 	}
 	function ComprobarPassword($user, $pass) {
 		$str = sha1 ( $user . ":" . $pass );
-		if ($stmt = $this->MySQL->PrepareQuery ( LOGIN_SEL_USERPWD )) {
+		if ($stmt = $this->MySQL->PrepareQuery ( LOGIN_SEL_EMPLEADOPWD )) {
 			$stmt->bind_param ( "is", $user, $str );
 			$stmt->execute ();
 			if ($stmt->fetch ()) {
